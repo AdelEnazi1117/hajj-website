@@ -25,7 +25,7 @@
             scroll-behavior: smooth;
         }
         
-        /* Custom Scrollbar */
+        /* تخصيص شريط التمرير */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -43,7 +43,7 @@
             background: #006033;
         }
         
-        /* Glowing Animations */
+        /* تأثيرات التوهج */
         @keyframes glow {
             0% { text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
             50% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
@@ -375,47 +375,7 @@
             width: 0%;
         }
         
-        /* Dark/Light Mode Toggle */
-        .theme-toggle {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 100;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: var(--transition);
-        }
-        
-        .theme-toggle:hover {
-            transform: rotate(30deg);
-        }
-        
-        /* Light Mode Styles */
-        body.light-mode {
-            --dark-bg: #f5f5f5;
-            --card-bg: #ffffff;
-            --card-darker: #f0f0f0;
-            --text-light: #333333;
-        }
-        
-        body.light-mode .nav-wrapper {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        
-        body.light-mode ::-webkit-scrollbar-track {
-            background: #e0e0e0;
-        }
-        
-        /* Loading Animation */
+        /* تحميل الانيميشن */
         .loader {
             position: fixed;
             top: 0;
@@ -447,7 +407,7 @@
             to { transform: rotate(360deg); }
         }
         
-        /* Floating Action Button */
+        /* زر الانتقال لأعلى الصفحة */
         .scroll-to-top {
             position: fixed;
             bottom: 80px;
@@ -471,7 +431,7 @@
             transform: translateY(-5px);
         }
         
-        /* Tooltip */
+        /* تلميح الأدوات */
         .tooltip {
             position: relative;
             display: inline-block;
@@ -501,7 +461,7 @@
             opacity: 1;
         }
         
-        /* Responsive Improvements */
+        /* تحسينات للتجاوب مع مختلف أحجام الشاشات */
         @media (max-width: 768px) {
             .section {
                 padding: 1.5rem;
@@ -520,22 +480,17 @@
     </style>
 </head>
 <body>
-    <!-- Reading Progress Bar -->
+    <!-- شريط التقدم في القراءة -->
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <!-- Theme Toggle Button -->
-    <div class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-    </div>
-
-    <!-- Scroll to Top Button -->
+    <!-- زر التمرير لأعلى -->
     <div class="scroll-to-top" id="scrollToTop">
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <!-- Toast Notification -->
+    <!-- إشعار منبثق -->
     <div class="toast" id="toast">
         <span id="toastMessage"></span>
     </div>
@@ -1168,23 +1123,23 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- البرمجيات -->
     <script>
-        // Scroll Progress Bar
+        // شريط التقدم في القراءة
         window.onscroll = function() {
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             let scrolled = (winScroll / height) * 100;
             document.getElementById("progressBar").style.width = scrolled + "%";
             
-            // Show/Hide Scroll to Top Button
+            // إظهار/إخفاء زر التمرير لأعلى
             if (winScroll > 300) {
                 document.getElementById("scrollToTop").style.display = "flex";
             } else {
                 document.getElementById("scrollToTop").style.display = "none";
             }
             
-            // Active Navigation Link
+            // تحديث الرابط النشط في القائمة
             let scrollPosition = window.scrollY + 100;
             document.querySelectorAll('section[data-section]').forEach(section => {
                 const sectionTop = section.offsetTop;
@@ -1202,7 +1157,7 @@
             });
         };
         
-        // Scroll to Top
+        // التمرير لأعلى الصفحة
         document.getElementById("scrollToTop").addEventListener("click", function() {
             window.scrollTo({
                 top: 0,
@@ -1210,22 +1165,9 @@
             });
         });
         
-        // Theme Toggle
-        document.getElementById("themeToggle").addEventListener("click", function() {
-            document.body.classList.toggle("light-mode");
-            
-            const icon = this.querySelector('i');
-            if (document.body.classList.contains("light-mode")) {
-                icon.className = "fas fa-sun";
-            } else {
-                icon.className = "fas fa-moon";
-            }
-            
-            // Show toast notification
-            showToast("تم تغيير وضع العرض");
-        });
+        // تم حذف وظيفة تبديل الوضع هنا
         
-        // Toggle FAQ
+        // تبديل عرض الأسئلة الشائعة
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
             const icon = element.querySelector("i");
@@ -1239,7 +1181,7 @@
             }
         }
         
-        // Show Toast Function
+        // وظيفة عرض الإشعارات المنبثقة
         function showToast(message) {
             const toast = document.getElementById("toast");
             document.getElementById("toastMessage").textContent = message;
@@ -1250,7 +1192,7 @@
             }, 3000);
         }
         
-        // Random Hajj Info
+        // معلومات عشوائية عن الحج
         const hajjInfo = [
             "الحج هو الركن الخامس من أركان الإسلام، وهو فرض على كل مسلم بالغ عاقل مستطيع مرة واحدة في العمر.",
             "قال رسول الله ﷺ: \"من حج فلم يرفث ولم يفسق رجع كيوم ولدته أمه\".",
@@ -1283,19 +1225,19 @@
             }, 10);
         });
         
-        // Contact Form
+        // نموذج الاتصال
         document.getElementById("contactForm").addEventListener("submit", function(e) {
             e.preventDefault();
             showToast("تم استلام رسالتك بنجاح! سنتواصل معك قريباً.");
             this.reset();
         });
         
-        // Download Manasik Button
+        // زر تنزيل دليل المناسك
         document.getElementById("downloadManasikBtn").addEventListener("click", function() {
             window.location.href = "https://drive.google.com/uc?export=download&id=1d5hiwJHaxxeVUbXnlYs0QD1uWcNFYDN-";
         });
         
-        // Prayer Times
+        // مواقيت الصلاة
         async function getPrayerTimes(date = new Date()) {
             try {
                 const formattedDate = date.toISOString().split('T')[0];
@@ -1312,15 +1254,15 @@
                     document.getElementById('isha').textContent = timings.Isha;
                 }
             } catch (error) {
-                console.error('Error fetching prayer times:', error);
+                console.error('خطأ في جلب مواقيت الصلاة:', error);
                 showToast('حدث خطأ في جلب مواقيت الصلاة');
             }
         }
 
-        // Get prayer times on page load
+        // جلب مواقيت الصلاة عند تحميل الصفحة
         getPrayerTimes();
         
-        // Countdown Timer
+        // العد التنازلي
         function updateCountdown() {
             const hajjDate = new Date("June 4, 2025 00:00:00").getTime();
             const now = new Date().getTime();
@@ -1334,10 +1276,11 @@
             }
         }
         
+        // تحديث العد التنازلي كل ثانية
         setInterval(updateCountdown, 1000);
         updateCountdown();
         
-        // Navigation Links Smooth Scroll
+        // تمرير سلس للروابط الداخلية
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1348,13 +1291,13 @@
             });
         });
         
-        // Gallery Items Click Event
+        // التفاعل مع صور المعرض
         document.querySelectorAll('.gallery-item').forEach(item => {
             item.addEventListener('click', function() {
                 const imageSrc = this.querySelector('img').getAttribute('src');
                 const caption = this.querySelector('.gallery-caption').textContent;
                 
-                // هنا يمكن إضافة كود لعرض الصورة بشكل مكبر في نافذة منبثقة
+                // إظهار اسم الصورة
                 showToast("تم النقر على صورة: " + caption);
             });
         });
