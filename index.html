@@ -520,14 +520,6 @@
     </style>
 </head>
 <body>
-    <!-- Loading Animation -->
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <p class="mt-4 font-bold">جاري تحميل دليل الحاج...</p>
-        </div>
-    </div>
-
     <!-- Reading Progress Bar -->
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
@@ -604,20 +596,13 @@
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                 <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
                     <div class="text-4xl mb-3 text-secondary-color">
                         <i class="fas fa-kaaba"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">مناسك الحج</h3>
                     <p>تعرف على كافة مناسك الحج من الإحرام وحتى طواف الوداع بتفاصيل دقيقة</p>
-                </div>
-                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
-                    <div class="text-4xl mb-3 text-secondary-color">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">خرائط المشاعر</h3>
-                    <p>خرائط تفصيلية للمشاعر المقدسة تساعدك على التنقل بسهولة بين المواقع</p>
                 </div>
                 <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
                     <div class="text-4xl mb-3 text-secondary-color">
@@ -1046,12 +1031,6 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-8">
-                <button id="showMoreFaqBtn" class="btn-primary">
-                    <i class="fas fa-plus ml-2"></i> المزيد من الأسئلة
-                </button>
-            </div>
         </section>
 
         <!-- Contact Section -->
@@ -1194,16 +1173,6 @@
 
     <!-- Scripts -->
     <script>
-        // Loading Animation
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('loader').style.opacity = '0';
-                setTimeout(function() {
-                    document.getElementById('loader').style.display = 'none';
-                }, 500);
-            }, 1500);
-        });
-        
         // Scroll Progress Bar
         window.onscroll = function() {
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -1322,16 +1291,6 @@
             e.preventDefault();
             showToast("تم استلام رسالتك بنجاح! سنتواصل معك قريباً.");
             this.reset();
-        });
-        
-        // Show More FAQ
-        document.getElementById("showMoreFaqBtn").addEventListener("click", function() {
-            showToast("جاري تحميل المزيد من الأسئلة الشائعة...");
-            
-            // هنا يمكن إضافة المزيد من الأسئلة الشائعة
-            setTimeout(() => {
-                showToast("تم تحميل جميع الأسئلة المتاحة");
-            }, 2000);
         });
         
         // Download Manasik Button
