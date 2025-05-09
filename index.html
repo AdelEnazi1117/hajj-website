@@ -410,7 +410,7 @@
         /* زر الانتقال لأعلى الصفحة */
         .scroll-to-top {
             position: fixed;
-            bottom: 80px;
+            bottom: 20px;
             left: 20px;
             width: 50px;
             height: 50px;
@@ -525,33 +525,40 @@
         <section id="home" class="section" data-section="home">
             <h2 class="text-3xl font-bold heading">الرئيسية</h2>
             <div class="text-center mb-8">
-                <h3 class="text-xl mb-4">الوقت المتبقي لموسم الحج القادم</h3>
+                <h3 class="text-xl mb-4">الوقت المتبقي لموسم الحج القادم (إلى الأربعاء ٧ ذو الحجة ١٤٤٦)</h3>
                 <div class="flex justify-center flex-wrap">
                     <div class="countdown-box w-24">
-                        <div id="days" class="text-3xl font-bold text-white">00</div>
-                        <div class="text-sm">يوم</div>
-                    </div>
-                    <div class="countdown-box w-24">
-                        <div id="hours" class="text-3xl font-bold text-white">00</div>
-                        <div class="text-sm">ساعة</div>
+                        <div id="seconds" class="text-3xl font-bold text-white">00</div>
+                        <div class="text-sm">ثانية</div>
                     </div>
                     <div class="countdown-box w-24">
                         <div id="minutes" class="text-3xl font-bold text-white">00</div>
                         <div class="text-sm">دقيقة</div>
                     </div>
                     <div class="countdown-box w-24">
-                        <div id="seconds" class="text-3xl font-bold text-white">00</div>
-                        <div class="text-sm">ثانية</div>
+                        <div id="hours" class="text-3xl font-bold text-white">00</div>
+                        <div class="text-sm">ساعة</div>
+                    </div>
+                    <div class="countdown-box w-24">
+                        <div id="days" class="text-3xl font-bold text-white">00</div>
+                        <div class="text-sm">يوم</div>
                     </div>
                 </div>
             </div>
             <div class="bg-gray-800 p-5 rounded-lg mb-6 bg-opacity-50">
                 <p class="text-center text-lg leading-relaxed">
-                    موقع دليل الحاج الإلكتروني يقدم لكم كل ما تحتاجونه من معلومات ونصائح لأداء فريضة الحج بكل يسر وسهولة. استعد روحياً وبدنياً مع أفضل التوجيهات والإرشادات لرحلة مباركة.
+                    موقع دليل الحاج الإلكتروني يقدم لكم كل ما تحتاجونه من معلومات ونصائح لأداء فريضة الحج بكل يسر وسهولة.
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
+                    <div class="text-4xl mb-3 text-secondary-color">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">نصائح عامة للحجاج</h3>
+                    <p>تعرف على أهم النصائح والإرشادات التي تساعدك في أداء مناسك الحج بكل سهولة ويسر</p>
+                </div>
                 <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
                     <div class="text-4xl mb-3 text-secondary-color">
                         <i class="fas fa-kaaba"></i>
@@ -561,10 +568,34 @@
                 </div>
                 <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
                     <div class="text-4xl mb-3 text-secondary-color">
-                        <i class="fas fa-hands-praying"></i>
+                        <i class="fas fa-headset"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">أدعية الحج</h3>
-                    <p>مجموعة من الأدعية المأثورة التي يمكنك ترديدها في مختلف مناسك الحج</p>
+                    <h3 class="text-xl font-bold mb-2">الدعم والمساعدة</h3>
+                    <p>خدمة الدعم والإجابة على استفساراتكم على مدار الساعة</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
+                    <div class="text-4xl mb-3 text-secondary-color">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">الأسئلة الشائعة</h3>
+                    <p>إجابات على الأسئلة الأكثر شيوعًا حول الحج والمناسك والأحكام</p>
+                </div>
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
+                    <div class="text-4xl mb-3 text-secondary-color">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">معرض الصور</h3>
+                    <p>صور توضيحية للمشاعر المقدسة والأماكن التي سيزورها الحاج</p>
+                </div>
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
+                    <div class="text-4xl mb-3 text-secondary-color">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">مواقيت الصلاة</h3>
+                    <p>تعرف على مواقيت الصلاة في مكة المكرمة والمشاعر المقدسة</p>
                 </div>
             </div>
         </section>
@@ -997,8 +1028,8 @@
                     <div class="text-4xl mb-4 text-secondary-color">
                         <i class="fas fa-phone-alt"></i>
                     </div>
-                    <h3 class="text-xl mb-2 font-bold">اتصل بنا</h3>
-                    <p class="text-lg">0539136115</p>
+                    <h3 class="text-xl mb-2 font-bold">تواصل معنا</h3>
+                    <p class="text-lg">للاستفسارات والملاحظات يمكنكم التواصل معنا مباشرة عبر نموذج الاتصال</p>
                 </div>
                 
                 <div class="bg-gray-800 bg-opacity-40 p-5 rounded-lg text-center">
@@ -1096,16 +1127,16 @@
                     <h3 class="text-xl font-bold mb-4 text-white">روابط مهمة</h3>
                     <ul class="space-y-2">
                         <li>
-                            <a href="https://www.haj.gov.sa/Home" class="text-gray-300 hover:text-white transition-colors">وزارة الحج والعمرة</a>
+                            <a href="https://www.haj.gov.sa/Home" target="_blank" class="text-gray-300 hover:text-white transition-colors">وزارة الحج والعمرة</a>
                         </li>
                         <li>
-                            <a href="https://alharamain.gov.sa/public/?page=Home" class="text-gray-300 hover:text-white transition-colors">الرئاسة العامة لشؤون المسجد الحرام</a>
+                            <a href="https://alharamain.gov.sa/public/?page=Home" target="_blank" class="text-gray-300 hover:text-white transition-colors">الرئاسة العامة لشؤون المسجد الحرام</a>
                         </li>
                         <li>
-                            <a href="https://www.moh.gov.sa/Pages/Default.aspx" class="text-gray-300 hover:text-white transition-colors">وزارة الصحة السعودية</a>
+                            <a href="https://www.moh.gov.sa/Pages/Default.aspx" target="_blank" class="text-gray-300 hover:text-white transition-colors">وزارة الصحة السعودية</a>
                         </li>
                         <li>
-                            <a href="https://geoportal.holymakkah.gov.sa/mmhajj/" class="text-gray-300 hover:text-white transition-colors">خريطة المشاعر المقدسة</a>
+                            <a href="https://geoportal.holymakkah.gov.sa/mmhajj/" target="_blank" class="text-gray-300 hover:text-white transition-colors">خريطة المشاعر المقدسة</a>
                         </li>
                     </ul>
                 </div>
@@ -1123,7 +1154,7 @@
         </div>
     </footer>
 
-    <!-- البرمجيات -->
+    <!-- السكربت -->
     <script>
         // شريط التقدم في القراءة
         window.onscroll = function() {
@@ -1164,8 +1195,6 @@
                 behavior: 'smooth'
             });
         });
-        
-        // تم حذف وظيفة تبديل الوضع هنا
         
         // تبديل عرض الأسئلة الشائعة
         function toggleFaq(element) {
