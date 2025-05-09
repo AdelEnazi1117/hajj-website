@@ -1058,13 +1058,13 @@
         <section id="contact" class="section" data-section="contact">
             <h2 class="text-3xl font-bold heading">تواصل معنا</h2>
             
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
                 <div class="bg-gray-800 bg-opacity-40 p-5 rounded-lg text-center">
                     <div class="text-4xl mb-4 text-secondary-color">
                         <i class="fas fa-phone-alt"></i>
                     </div>
                     <h3 class="text-xl mb-2 font-bold">اتصل بنا</h3>
-                    <p class="text-lg">+966 12 123 4567</p>
+                    <p class="text-lg">0539136115</p>
                 </div>
                 
                 <div class="bg-gray-800 bg-opacity-40 p-5 rounded-lg text-center">
@@ -1072,15 +1072,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3 class="text-xl mb-2 font-bold">البريد الإلكتروني</h3>
-                    <p class="text-lg">info@hajjguide.sa</p>
-                </div>
-                
-                <div class="bg-gray-800 bg-opacity-40 p-5 rounded-lg text-center">
-                    <div class="text-4xl mb-4 text-secondary-color">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3 class="text-xl mb-2 font-bold">العنوان</h3>
-                    <p class="text-lg">مكة المكرمة، المملكة العربية السعودية</p>
+                    <p class="text-lg">441008911@stu.ut.edu.sa</p>
                 </div>
             </div>
             
@@ -1153,22 +1145,6 @@
                 </div>
             </div>
             
-            <div class="bg-gray-800 bg-opacity-40 p-5 rounded-lg">
-                <h3 class="text-xl mb-4 text-center font-bold">ابحث عن مواقيت الصلاة حسب التاريخ</h3>
-                
-                <div class="flex flex-wrap justify-center gap-4">
-                    <div class="w-full md:w-auto">
-                        <input type="date" id="prayerDate" class="p-3 bg-gray-700 rounded border border-gray-600 text-white">
-                    </div>
-                    
-                    <div class="w-full md:w-auto">
-                        <button id="searchPrayerBtn" class="btn-primary w-full md:w-auto py-3">
-                            <i class="fas fa-search ml-2"></i> بحث
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
             <p class="mt-4 text-center text-sm text-gray-400">مواقيت الصلاة قد تختلف قليلاً حسب اليوم والموسم، الأوقات المعروضة تقريبية</p>
         </section>
     </main>
@@ -1180,20 +1156,6 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-white">دليل الحاج الإلكتروني</h3>
                     <p class="mb-4">دليلك الشامل لأداء مناسك الحج بكل يسر وسهولة، نقدم لكم معلومات ونصائح قيمة للحجاج.</p>
-                    <div class="flex space-x-4 space-x-reverse">
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-facebook fa-lg"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-twitter fa-lg"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-instagram fa-lg"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-youtube fa-lg"></i>
-                        </a>
-                    </div>
                 </div>
                 
                 <div>
@@ -1218,20 +1180,14 @@
                 </div>
                 
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-white">اشترك في النشرة البريدية</h3>
-                    <p class="mb-4">اشترك للحصول على أحدث المعلومات والنصائح للحجاج</p>
-                    <form class="flex">
-                        <input type="email" placeholder="البريد الإلكتروني" class="p-2 bg-gray-800 text-white border border-gray-700 rounded-r-none rounded-r w-full">
-                        <button type="submit" class="bg-primary-color text-white px-4 rounded-l-none rounded-l">
-                            <i class="fas fa-arrow-left"></i>
-                        </button>
-                    </form>
+                    <h3 class="text-xl font-bold mb-4 text-white">تواصل معنا</h3>
+                    <p class="mb-2">هاتف: 0539136115</p>
+                    <p>البريد الإلكتروني: 441008911@stu.ut.edu.sa</p>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-6 text-center">
-                <p>جميع الحقوق محفوظة &copy; 2025 - دليل الحاج الإلكتروني | تصميم فريق طلاب جامعة الملك عبدالعزيز</p>
-                <p class="mt-2 text-sm text-gray-500">تم التطوير بواسطة: عادل، نواف، أحمد، باسل، عزيز</p>
+                <p>جميع الحقوق محفوظة &copy; 2025 - دليل الحاج الإلكتروني</p>
             </div>
         </div>
     </footer>
@@ -1412,17 +1368,6 @@
 
         // Get prayer times on page load
         getPrayerTimes();
-
-        // Prayer Times Search
-        document.getElementById("searchPrayerBtn").addEventListener("click", function() {
-            const selectedDate = document.getElementById("prayerDate").value;
-            if (selectedDate) {
-                getPrayerTimes(new Date(selectedDate));
-                showToast("تم تحديث مواقيت الصلاة");
-            } else {
-                showToast("الرجاء اختيار تاريخ");
-            }
-        });
         
         // Countdown Timer
         function updateCountdown() {
