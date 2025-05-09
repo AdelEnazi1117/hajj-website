@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الحاج الإلكتروني | الموقع الشامل</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="mt-4 font-bold">جاري تحميل دليل الحاج...</p>
+        </div>
+    </div>
+
+    <!-- Reading Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+    <!-- Header -->
+    <header class="text-center mb-6 pt-6">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold text-center mb-3" style="animation: glow 3s infinite;">دليل الحاج الإلكتروني</h1>
+            <p class="text-lg mb-6 text-gray-300">دليلك الشامل لأداء مناسك الحج بكل يسر وسهولة</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <div class="nav-wrapper" id="navbar">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-center flex-wrap py-2 overflow-x-auto">
+                <a href="#home" class="nav-link active" data-section="home">الرئيسية</a>
+                <a href="#manasik" class="nav-link" data-section="manasik">المناسك</a>
+                <a href="#tips" class="nav-link" data-section="tips">نصائح للحجاج</a>
+                <a href="#info" class="nav-link" data-section="info">معلومات</a>
+                <a href="#gallery" class="nav-link" data-section="gallery">معرض الصور</a>
+                <a href="#faq" class="nav-link" data-section="faq">الأسئلة الشائعة</a>
+                <a href="#contact" class="nav-link" data-section="contact">تواصل معنا</a>
+                <a href="#prayer" class="nav-link" data-section="prayer">مواقيت الصلاة</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6 max-w-6xl">
+        <!-- Home Section -->
+        <section id="home" class="section" data-section="home">
+            <h2 class="text-3xl font-bold heading">الرئيسية</h2>
+            <div class="text-center mb-8">
+                <h3 class="text-xl mb-4">الوقت المتبقي لموسم الحج القادم</h3>
+                <div class="flex justify-center flex-wrap">
+                    <div class="countdown-box w-24">
+                        <div id="days" class="text-3xl font-bold text-white">00</div>
+                        <div class="text-sm">يوم</div>
+                    </div>
+                    <div class="countdown-box w-24">
+                        <div id="hours" class="text-3xl font-bold text-white">00</div>
+                        <div class="text-sm">ساعة</div>
+                    </div>
+                    <div class="countdown-box w-24">
+                        <div id="minutes" class="text-3xl font-bold text-white">00</div>
+                        <div class="text-sm">دقيقة</div>
+                    </div>
+                    <div class="countdown-box w-24">
+                        <div id="seconds" class="text-3xl font-bold text-white">00</div>
+                        <div class="text-sm">ثانية</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg mb-6 bg-opacity-50">
+                <p class="text-center text-lg leading-relaxed">
+                    موقع دليل الحاج الإلكتروني يقدم لكم كل ما تحتاجونه من معلومات ونصائح لأداء فريضة الحج بكل يسر وسهولة. استعد روحياً وبدنياً مع أفضل التوجيهات والإرشادات لرحلة مباركة.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
+                    <div class="text-4xl mb-3 text-secondary-color">
+                        <i class="fas fa-kaaba"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">مناسك الحج</h3>
+                    <p>تعرف على كافة مناسك الحج من الإحرام وحتى طواف الوداع بتفاصيل دقيقة</p>
+                </div>
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
+                    <div class="text-4xl mb-3 text-secondary-color">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">خرائط المشاعر</h3>
+                    <p>خرائط تفصيلية للمشاعر المقدسة تساعدك على التنقل بسهولة بين المواقع</p>
+                </div>
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg text-center">
+                    <div class="text-4xl mb-3 text-secondary-color">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">أدعية الحج</h3>
+                    <p>مجموعة من الأدعية المأثورة التي يمكنك ترديدها في مختلف مناسك الحج</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manasik Section -->
+        <section id="manasik" class="section" data-section="manasik">
+            <h2 class="text-3xl font-bold heading">مناسك الحج بالترتيب</h2>
+            
+            <div class="hajj-steps-timeline">
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">1. الإحرام</h3>
+                        <p class="leading-relaxed">نية الدخول في النسك، ويتم عند الميقات المكاني المحدد، مع لبس ملابس الإحرام للرجال ويشترط النية والتلبية وترك محظورات الإحرام.</p>
+                    </div>
+                </div>
+                
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">2. طواف القدوم</h3>
+                        <p class="leading-relaxed">الطواف حول الكعبة سبعة أشواط بداية من الحجر الأسود عند الوصول إلى مكة. ويكون الطواف مع جعل البيت عن يسار الطائف.</p>
+                    </div>
+                </div>
+                
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">3. السعي بين الصفا والمروة</h3>
+                        <p class="leading-relaxed">السعي بين جبلي الصفا والمروة سبعة أشواط بدءًا من الصفا وانتهاءً بالمروة. ويسن الإسراع للرجال بين العلامتين الخضراوين.</p>
+                    </div>
+                </div>
+                
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">4. يوم التروية والتوجه إلى منى</h3>
+                        <p class="leading-relaxed">في اليوم الثامن من ذي الحجة، التوجه إلى منى والمبيت بها والإكثار من التلبية والصلوات الخمس قصراً دون جمع.</p>
+                    </div>
+                </div>
+                
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">5. الوقوف بعرفة</h3>
+                        <p class="leading-relaxed">في اليوم التاسع، التوجه إلى عرفة والوقوف بها من الظهر حتى غروب الشمس. الوقوف بعرفة هو ركن الحج الأعظم.</p>
+                    </div>
+                </div>
+                
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">6. المبيت بمزدلفة</h3>
+                        <p class="leading-relaxed">بعد غروب شمس يوم عرفة، التوجه إلى مزدلفة للمبيت وجمع الحصى لرمي الجمرات. ويجمع بين صلاتي المغرب والعشاء جمع تأخير.</p>
+                    </div>
+                </div>
+                
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">7. رمي جمرة العقبة</h3>
+                        <p class="leading-relaxed">في صبيحة يوم النحر (العاشر)، رمي جمرة العقبة الكبرى بسبع حصيات مع التكبير مع كل حصاة.</p>
+                    </div>
+                </div>
+                
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">8. الهدي والتحلل</h3>
+                        <p class="leading-relaxed">ذبح الهدي ثم الحلق أو التقصير للشعر (التحلل الأول) في يوم النحر. وبهذا يحل للحاج ما حرم عليه بالإحرام ما عدا النساء.</p>
+                    </div>
+                </div>
+                
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">9. طواف الإفاضة</h3>
+                        <p class="leading-relaxed">طواف الإفاضة (طواف الركن) ثم السعي لمن لم يسع بعد طواف القدوم. وهو ركن من أركان الحج لا يتم الحج إلا به.</p>
+                    </div>
+                </div>
+                
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">10. رمي الجمرات الثلاث</h3>
+                        <p class="leading-relaxed">في أيام التشريق، رمي الجمرات الثلاث (الصغرى ثم الوسطى ثم الكبرى) كل جمرة بسبع حصيات.</p>
+                    </div>
+                </div>
+                
+                <div class="hajj-step">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-3">11. طواف الوداع</h3>
+                        <p class="leading-relaxed">عند مغادرة مكة، يؤدى طواف الوداع كآخر العهد بالبيت الحرام. وهو واجب من واجبات الحج لمن أراد الخروج من مكة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button class="btn-primary" id="downloadManasikBtn">
+                    <i class="fas fa-download ml-2"></i> تحميل دليل المناسك
+                </button>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="section" data-section="tips">
+            <h2 class="text-3xl font-bold heading">نصائح عامة للحجاج</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                    <div class="text-4xl mb-4 text-center text-secondary-color">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl mb-4 text-center text-white font-bold">نصائح صحية</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>اشرب كميات كافية من الماء لتفادي الجفاف (2-3 لتر يومياً).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>استخدم مظلة شمسية وواقي شمس لتفادي ضربات الشمس.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>تأكد من أخذ اللقاحات الضرورية قبل السفر بوقت كافٍ.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>احتفظ بالأدوية الخاصة بك في حقيبة يد قريبة دائماً.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>اغسل يديك باستمرار واستخدم المعقمات للوقاية من العدوى.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>خذ قسطاً كافياً من الراحة وتجنب الإجهاد الزائد.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                    <div class="text-4xl mb-4 text-center text-secondary-color">
+                        <i class="fas fa-suitcase"></i>
+                    </div>
+                    <h3 class="text-xl mb-4 text-center text-white font-bold">نصائح للرحلة</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>تأكد من صلاحية جواز السفر والتأشيرة قبل موعد السفر بمدة كافية.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>احمل نسخاً إضافية من مستنداتك المهمة وصور شخصية.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>تعلّم خطوات أداء المناسك جيداً قبل السفر عبر القراءة والمشاهدة.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>اختر حقيبة سهلة الحمل ومرتبة واكتب بياناتك عليها.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>احرص على الوصول مبكراً إلى نقاط التجمع والتعرف على مخارج الطوارئ.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>استخدم التطبيقات الرسمية لمتابعة التنقلات واستخدام وسائل النقل.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                    <div class="text-4xl mb-4 text-center text-secondary-color">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl mb-4 text-center text-white font-bold">نصائح في الآداب</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>التزم بالهدوء والصبر مع الزحام وتجنب رفع الصوت.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>احترم خصوصية الآخرين وابتعد عن التصوير العشوائي للأشخاص.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>تجنب التدافع واحرص على السلامة العامة والالتزام بالإرشادات.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>احرص على نظافة المكان وعدم رمي النفايات إلا في الأماكن المخصصة.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>قدم المساعدة لكبار السن وذوي الاحتياجات الخاصة عند الإمكان.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mt-1 ml-2"></i>
+                            <span>تجنب الجدال وحافظ على روحانية المكان والتركيز على العبادة.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg mt-8">
+                <h3 class="text-xl mb-4 text-center text-white font-bold">أغراض وملابس ضرورية للحج</h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-gray-700 bg-opacity-50 p-3 rounded text-center">
+                        <i class="fas fa-tshirt text-2xl mb-2 text-secondary-color"></i>
+                        <p>ملابس الإحرام</p>
+                    </div>
+                    <div class="bg-gray-700 bg-opacity-50 p-3 rounded text-center">
+                        <i class="fas fa-pills text-2xl mb-2 text-secondary-color"></i>
+                        <p>حقيبة أدوية شخصية</p>
+                    </div>
+                    <div class="bg-gray-700 bg-opacity-50 p-3 rounded text-center">
+                        <i class="fas fa-passport text-2xl mb-2 text-secondary-color"></i>
+                        <p>جواز سفر وتأشيرة</p>
+                    </div>
+                    <div class="bg-gray-700 bg-opacity-50 p-3 rounded text-center">
+                        <i class="fas fa-umbrella text-2xl mb-2 text-secondary-color"></i>
+                        <p>مظلة شمسية</p>
+                    </div>
+                    <div class="bg-gray-700 bg-opacity-50 p-3 rounded text-center">
+                        <i class="fas fa-money-bill text-2xl mb-2 text-secondary-color"></i>
+                        <p>نقود ومحفظة آمنة</p>
+                    </div>
+                    <div class="bg-gray-700 bg-opacity-50 p-3 rounded text-center">
+                        <i class="fas fa-spray-can text-2xl mb-2 text-secondary-color"></i>
+                        <p>معقم يدين</p>
+                    </div>
+                    <div class="bg-gray-700 bg-opacity-50 p-3 rounded text-center">
+                        <i class="fas fa-phone text-2xl mb-2 text-secondary-color"></i>
+                        <p>هاتف وشاحن</p>
+                    </div>
+                    <div class="bg-gray-700 bg-opacity-50 p-3 rounded text-center">
+                        <i class="fas fa-book text-2xl mb-2 text-secondary-color"></i>
+                        <p>كتيب أدعية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section id="info" class="section" data-section="info">
+            <h2 class="text-3xl font-bold heading">معلومات عن الحج</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg">
+                    <h3 class="text-xl mb-3 font-bold">ما هو الحج؟</h3>
+                    <p class="leading-relaxed">الحج هو الركن الخامس من أركان الإسلام، وهو زيارة بيت الله الحرام في مكة المكرمة في وقت محدد من العام لأداء مناسك معينة. والحج فرض على كل مسلم بالغ عاقل مستطيع مرة واحدة في العمر.</p>
+                </div>
+                
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg">
+                    <h3 class="text-xl mb-3 font-bold">متى يكون موسم الحج؟</h3>
+                    <p class="leading-relaxed">يؤدى الحج في شهر ذي الحجة من كل عام هجري، وتحديداً في الأيام من الثامن إلى الثالث عشر منه، وأهم أيامه هو يوم عرفة الذي يصادف اليوم التاسع من ذي الحجة.</p>
+                </div>
+            </div>
+            
+            <p class="mb-4">اضغط على الزر أدناه للحصول على معلومة عشوائية عن الحج:</p>
+            <button id="infoButton" class="btn-primary mb-4">
+                <i class="fas fa-random ml-2"></i> عرض معلومة عشوائية
+            </button>
+            
+            <div id="infoContent" class="info-box">
+                <p id="randomInfo" class="text-lg"></p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg">
+                    <h3 class="text-xl mb-3 font-bold">فضل الحج</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-yellow-400 mt-1 ml-2"></i>
+                            <span>الحج المبرور ليس له جزاء إلا الجنة كما أخبر النبي ﷺ.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-yellow-400 mt-1 ml-2"></i>
+                            <span>الحج يكفر الذنوب والخطايا، فمن حج ولم يرفث ولم يفسق رجع كيوم ولدته أمه.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-yellow-400 mt-1 ml-2"></i>
+                            <span>الدعاء مستجاب في الحج وخاصة يوم عرفة.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg">
+                    <h3 class="text-xl mb-3 font-bold">أقسام الحج</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-primary-color mt-1 ml-2"></i>
+                            <span><strong>التمتع:</strong> أن يحرم بالعمرة في أشهر الحج، ثم يحل من إحرامه، ثم يحرم بالحج في نفس العام.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-primary-color mt-1 ml-2"></i>
+                            <span><strong>القِران:</strong> أن يحرم بالعمرة والحج معاً، أو يحرم بالعمرة ثم يدخل الحج عليها قبل الشروع في طوافها.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-primary-color mt-1 ml-2"></i>
+                            <span><strong>الإفراد:</strong> أن يحرم بالحج فقط ويستمر في إحرامه حتى ينتهي من<span><strong>الإفراد:</strong> أن يحرم بالحج فقط ويستمر في إحرامه حتى ينتهي من جميع أعمال الحج.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Section (New) -->
+        <section id="gallery" class="section" data-section="gallery">
+            <h2 class="text-3xl font-bold heading">معرض الصور</h2>
+            <p class="mb-6">مجموعة مختارة من صور المشاعر المقدسة والأماكن المهمة في مكة المكرمة</p>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/JhzuzIu.jpg" alt="الكعبة المشرفة">
+                    <div class="gallery-caption">الكعبة المشرفة في المسجد الحرام</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/tqZu6yG.jpg" alt="جبل عرفات">
+                    <div class="gallery-caption">جبل عرفات - المكان الذي يقف فيه الحجاج يوم عرفة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/2u6i2Uw.jpg" alt="مزدلفة">
+                    <div class="gallery-caption">مشعر مزدلفة - حيث يبيت الحجاج ليلة النحر</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/UsiKPQ8.jpg" alt="منى">
+                    <div class="gallery-caption">مشعر منى - حيث يقضي الحجاج أيام التشريق</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/EUiNvd5.jpg" alt="الصفا والمروة">
+                    <div class="gallery-caption">المسعى بين الصفا والمروة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/MxRTPvd.jpg" alt="جمرات منى">
+                    <div class="gallery-caption">جمرات منى - حيث يرمي الحجاج الجمرات</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section" data-section="faq">
+            <h2 class="text-3xl font-bold heading">الأسئلة الشائعة</h2>
+            
+            <div class="mt-6">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>ما هي مواعيد الحج؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تبدأ مناسك الحج في اليوم الثامن من شهر ذي الحجة (يوم التروية) وتستمر حتى اليوم الثالث عشر من نفس الشهر (آخر أيام التشريق). وتعتبر الأيام من 8-13 ذو الحجة هي أيام الحج الرئيسية.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>ما هي مستلزمات الحج الأساسية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تشمل المستلزمات الأساسية: ملابس الإحرام للرجال (إزار ورداء أبيضان)، ملابس محتشمة للنساء، جواز السفر، تأشيرة الحج، تأمين صحي، أدوية شخصية، مظلة شمسية، حقيبة سهلة الحمل، معقم يدين، كمامات، أحذية مريحة، كتيب أدعية، وبطاقة تعريفية تحمل بياناتك ومقر سكنك.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>كيف يمكنني الوصول إلى مكة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك الوصول إلى مكة عن طريق الطيران إلى مطار الملك عبدالعزيز في جدة أو مطار الأمير محمد بن عبدالعزيز في المدينة المنورة، ومن ثم استخدام الحافلات المخصصة لنقل الحجاج إلى مكة المكرمة. كما يتوفر قطار الحرمين الذي يربط بين جدة ومكة المكرمة والمدينة المنورة.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>هل يمكنني اصطحاب الأطفال في الحج؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، يمكن اصطحاب الأطفال في الحج، ولكن يجب مراعاة احتياجاتهم الخاصة. تأكد من حمل المستلزمات الضرورية لهم، وأخذ التدابير اللازمة لحمايتهم من الحرارة والزحام. يُنصح باستخدام أساور تعريفية للأطفال تحتوي على بياناتك ومعلومات التواصل معك في حالة الضياع.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>ما هو الإحرام؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>الإحرام هو نية الدخول في مناسك الحج أو العمرة. ويرتدي الرجال ملابس خاصة عند الإحرام تتكون من قطعتين بيضاوين غير مخيطتين: إزار (يلف حول الجزء السفلي من الجسم) ورداء (يوضع على الكتفين). أما النساء فيمكنهن ارتداء أي ملابس محتشمة تغطي الجسم ما عدا الوجه والكفين. ويمتنع المحرم عن ارتكاب محظورات الإحرام كقص الشعر والأظافر واستخدام الطيب.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>كيف يمكنني الحصول على تأشيرة الحج؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك الحصول على تأشيرة الحج من خلال التسجيل لدى وكالات السفر والسياحة المعتمدة في بلدك والتي تنظم رحلات الحج. تتطلب عملية التقديم تعبئة استمارات خاصة، وتقديم جواز سفر ساري المفعول، وصور شخصية، وشهادة تطعيم ضد الأمراض المعدية، وإثبات القدرة المالية على أداء فريضة الحج. تختلف الإجراءات والمتطلبات من دولة إلى أخرى.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>ما هو يوم التروية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يوم التروية هو اليوم الثامن من ذي الحجة، ويسمى بهذا الاسم لأن الحجاج كانوا يتزودون فيه بالماء (يرتوون) قبل التوجه إلى عرفة. في هذا اليوم يتوجه الحجاج من مكة المكرمة إلى منى، ويبيتون فيها ليلة التاسع، ويصلون فيها الظهر والعصر والمغرب والعشاء والفجر قصراً دون جمع، ثم يتوجهون صباح اليوم التاسع إلى عرفة.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>ما الفرق بين الحج والعمرة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>الحج هو الركن الخامس من أركان الإسلام ويؤدى في وقت محدد من العام (شهر ذي الحجة)، بينما العمرة هي زيارة البيت الحرام لأداء مناسك معينة ويمكن أداؤها في أي وقت من العام. الحج له مناسك إضافية مثل الوقوف بعرفة ومبيت مزدلفة ومنى ورمي الجمرات، بينما تقتصر العمرة على الإحرام والطواف حول الكعبة والسعي بين الصفا والمروة والتحلل بحلق الشعر أو تقصيره.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button id="showMoreFaqBtn" class="btn-primary">
+                    <i class="fas fa-plus ml-2"></i> المزيد من الأسئلة
+                </button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" data-section="contact">
+            <h2 class="text-3xl font-bold heading">تواصل معنا</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <div class="bg-gray-800 bg-opacity-40 p-5 rounded-lg text-center">
+                    <div class="text-4xl mb-4 text-secondary-color">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl mb-2 font-bold">اتصل بنا</h3>
+                    <p class="text-lg">+966 12 123 4567</p>
+                </div>
+                
+                <div class="bg-gray-800 bg-opacity-40 p-5 rounded-lg text-center">
+                    <div class="text-4xl mb-4 text-secondary-color">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl mb-2 font-bold">البريد الإلكتروني</h3>
+                    <p class="text-lg">info@hajjguide.sa</p>
+                </div>
+                
+                <div class="bg-gray-800 bg-opacity-40 p-5 rounded-lg text-center">
+                    <div class="text-4xl mb-4 text-secondary-color">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl mb-2 font-bold">العنوان</h3>
+                    <p class="text-lg">مكة المكرمة، المملكة العربية السعودية</p>
+                </div>
+            </div>
+            
+            <form id="contactForm" class="max-w-lg mx-auto bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2 font-semibold">الاسم</label>
+                    <input type="text" id="name" class="w-full p-3 bg-gray-700 rounded border border-gray-600 text-white" required>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="email" class="block mb-2 font-semibold">البريد الإلكتروني</label>
+                    <input type="email" id="email" class="w-full p-3 bg-gray-700 rounded border border-gray-600 text-white" required>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="subject" class="block mb-2 font-semibold">الموضوع</label>
+                    <select id="subject" class="w-full p-3 bg-gray-700 rounded border border-gray-600 text-white" required>
+                        <option value="" disabled selected>اختر موضوع الرسالة</option>
+                        <option value="استفسار">استفسار</option>
+                        <option value="اقتراح">اقتراح</option>
+                        <option value="ملاحظة">ملاحظة</option>
+                        <option value="أخرى">أخرى</option>
+                    </select>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="message" class="block mb-2 font-semibold">الرسالة</label>
+                    <textarea id="message" rows="5" class="w-full p-3 bg-gray-700 rounded border border-gray-600 text-white" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary w-full py-3">
+                    <i class="fas fa-paper-plane ml-2"></i> إرسال
+                </button>
+            </form>
+        </section>
+
+        <!-- Prayer Times Section -->
+        <section id="prayer" class="section" data-section="prayer">
+            <h2 class="text-3xl font-bold heading">مواقيت الصلاة في مكة المكرمة</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <div class="prayer-time">
+                        <span class="prayer-name">الفجر</span>
+                        <span>04:23 ص</span>
+                    </div>
+                    <div class="prayer-time">
+                        <span class="prayer-name">الشروق</span>
+                        <span>05:45 ص</span>
+                    </div>
+                    <div class="prayer-time">
+                        <span class="prayer-name">الظهر</span>
+                        <span>12:18 م</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="prayer-time">
+                        <span class="prayer-name">العصر</span>
+                        <span>03:37 م</span>
+                    </div>
+                    <div class="prayer-time">
+                        <span class="prayer-name">المغرب</span>
+                        <span>06:49 م</span>
+                    </div>
+                    <div class="prayer-time">
+                        <span class="prayer-name">العشاء</span>
+                        <span>08:19 م</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 bg-opacity-40 p-5 rounded-lg">
+                <h3 class="text-xl mb-4 text-center font-bold">ابحث عن مواقيت الصلاة حسب التاريخ</h3>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="w-full md:w-auto">
+                        <select id="prayerMonth" class="p-3 bg-gray-700 rounded border border-gray-600 text-white">
+                            <option value="1">محرم</option>
+                            <option value="2">صفر</option>
+                            <option value="3">ربيع الأول</option>
+                            <option value="4">ربيع الثاني</option>
+                            <option value="5">جمادى الأولى</option>
+                            <option value="6">جمادى الآخرة</option>
+                            <option value="7">رجب</option>
+                            <option value="8">شعبان</option>
+                            <option value="9">رمضان</option>
+                            <option value="10">شوال</option>
+                            <option value="11">ذو القعدة</option>
+                            <option value="12" selected>ذو الحجة</option>
+                        </select>
+                    </div>
+                    
+                    <div class="w-full md:w-auto">
+                        <select id="prayerDay" class="p-3 bg-gray-700 rounded border border-gray-600 text-white">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8" selected>8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
+                    </div>
+                    
+                    <div class="w-full md:w-auto">
+                        <select id="prayerYear" class="p-3 bg-gray-700 rounded border border-gray-600 text-white">
+                            <option value="1444">1444 هـ</option>
+                            <option value="1445">1445 هـ</option>
+                            <option value="1446" selected>1446 هـ</option>
+                        </select>
+                    </div>
+                    
+                    <div class="w-full md:w-auto">
+                        <button id="searchPrayerBtn" class="btn-primary w-full md:w-auto py-3">
+                            <i class="fas fa-search ml-2"></i> بحث
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="mt-4 text-center text-sm text-gray-400">مواقيت الصلاة قد تختلف قليلاً حسب اليوم والموسم، الأوقات المعروضة تقريبية</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 mt-12 py-8 text-gray-300">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">دليل الحاج الإلكتروني</h3>
+                    <p class="mb-4">دليلك الشامل لأداء مناسك الحج بكل يسر وسهولة، نقدم لكم معلومات ونصائح قيمة للحجاج.</p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-youtube fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">روابط مهمة</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">وزارة الحج والعمرة</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">الرئاسة العامة لشؤون المسجد الحرام</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">الهيئة العامة للسياحة والتراث الوطني</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">وزارة الصحة السعودية</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">خريطة المشاعر المقدسة</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">اشترك في النشرة البريدية</h3>
+                    <p class="mb-4">اشترك للحصول على أحدث المعلومات والنصائح للحجاج</p>
+                    <form class="flex">
+                        <input type="email" placeholder="البريد الإلكتروني" class="p-2 bg-gray-800 text-white border border-gray-700 rounded-r-none rounded-r w-full">
+                        <button type="submit" class="bg-primary-color text-white px-4 rounded-l-none rounded-l">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center">
+                <p>جميع الحقوق محفوظة &copy; 2025 - دليل الحاج الإلكتروني | تصميم فريق طلاب جامعة الملك عبدالعزيز</p>
+                <p class="mt-2 text-sm text-gray-500">تم التطوير بواسطة: عادل، نواف، أحمد، باسل، عزيز</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
