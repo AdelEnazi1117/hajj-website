@@ -36,7 +36,7 @@
 
 ## كيفية التشغيل
 
-- قم بالدخول للموقع مباشرة: https://adelenazi1117.github.io
+- قم بالدخول للموقع مباشرة: https://hajj-website-rouge.vercel.app/
 
 أو: حمّل ثم افتح ملف `index.html` في متصفح الويب
 
